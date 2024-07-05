@@ -1,0 +1,297 @@
+/* personal.css */
+html{
+    scroll-behavior: smooth;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  header {
+    background:linear-gradient(rgb(110, 52, 243),rgb(73, 224, 235));
+    border-radius: 20px;
+    color:white;
+    padding: 20px 0;
+    margin: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  /*Navigation bar*/
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-bar li {
+    margin: 0 15px;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav-bar a:hover {
+    color:rgb(57, 18, 228);
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(rgb(187, 122, 240),rgb(206, 198, 241));
+    box-shadow: 5 10px 8px rgba(236, 233, 233, 0.1);
+  }
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Hide navigation items on mobile */
+  @media (max-width: 650px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav-bar ul {
+        display: none;
+        flex-direction: row;
+    }
+  
+    .nav-bar ul.show {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  
+    .nav-bar li {
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+  }
+  
+  
+  /* Intro Section */
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 10px;
+    color:#fff;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+  }
+  
+  
+  .intro-section .image img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  
+  /* About Me Section */
+  .about-me {
+      
+    background: transparent;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .about-me h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(70, 70, 247);
+  }
+  
+  .about-me p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Skills Section */
+  .skills {
+    color:rgb(70, 70, 247);
+    text-align: center;
+    padding: 50px 20px;
+    height: auto;
+    background-color: #fff;
+  }
+  
+  .skills .heading { 
+    font-size: 28px;
+   margin-bottom: 30px;
+  }
+  .icon-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .skills .icons img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 100px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .icons img:hover{
+    transform: scale(2);
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .progress-bar .skill-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(70, 70, 247);
+  }
+  
+  .progress-bar .progress {
+    background-color: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    height: 25px;
+    width: 80%;
+    margin: 10px auto;
+  }
+  
+  .progress-bar .progress .python{
+    display: block;
+    height: 100%;
+    width: 60%; /* Adjust width according to skill level */
+    background-color:rgb(65, 210, 247);
+  }
+  .progress-bar .progress .html{
+    display: block;
+    height: 100%;
+    width: 80%; /* Adjust width according to skill level */
+    background-color:rgb(65, 210, 247);
+  }
+  .progress-bar .progress .javascript{
+    display: block;
+    height: 100%;
+    width: 50%; /* Adjust width according to skill level */
+    background-color:rgb(65, 210, 247);
+  }
+  /* Add initial hidden state and animation */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s, transform 5s;
+  }
+  
+  .animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .certificate-sec{
+    margin: 10px;
+    padding: 10px 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .cert-heading{
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: rgb(70, 70, 247);
+  }
+  .certificate-sec .cert img{
+    padding: 10px 0;
+    width: 20rem;
+    height: 20rem;
+    animation: transform 5s ease-out;
+  }
+  
+  .certificate-sec .cert img:hover{
+    transform: scale(1.5);
+  }
+  /* Contact Info Section */
+  .contact-info {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .contact-info .cont-info-head {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: rgb(70, 70, 247);
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color:#33c4f0;
+  }
+  
+  .contact-info img {
+    width: 30px;
+    height: 30px;
+    margin: 10px 0;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  .copyright{
+    width: 100%;
+    justify-content:right;
+    align-items: baseline;
+  }
+  .icons-footer {
+    display: flex;
+    margin-left:10%;
+    width: 30px;
+    height: 30px;
+   
+  
+   
+  
+  }
+  
+  
